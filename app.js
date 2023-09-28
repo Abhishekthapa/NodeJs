@@ -1,14 +1,26 @@
-const helpers = require("./helpers");
-//object destructing i.e. like importing a function from a class rather than whole class. Line 1 imports whole helpers.js but line 3  imports a method only.
-const {diff, mult} = require("./helpers");
-const http = require("http");
+// const express = require("express");
+// const app = express();
 
+// app.get("/",(req, res)=>{
+//     res.send("hello world");
+// });
+// app.listen(3000);
 
-console.log("Sum Total: " + helpers.sum(10,1));
-console.log("Difference Total: " + diff(10,1));
-console.log("Product Total: " + mult(10,5));
+const fs = require("fs");
+const fileName= "target.txt";
 
-const server = http.createServer((req,res)=>{
-    res.end("Hello World from node js modified");
-});
-server.listen(3000);
+//aysnc example
+fs.readFile(fileName, (err, data)=>{
+    if(err){
+        console.log(err);
+    }
+    console.log(data.toString());
+})
+
+console.log("hello from the other side; async example");
+
+//sync example
+
+const data = fs.readFileSync(fileName); //callback not required as the event loop will take next event only after completion of this event;
+console.log(data.toString());
+console.log("example of sync")
