@@ -16,5 +16,5 @@ exports.diff =  (a, b) => a - b;
 exports.mult =  (a, b) => a * b;
 
 
-//this console log of process will only show above module exported i.e.,  exports: { sum: [Function: sum] },. Other js files wont because exports is a private to each module.
+//this console log of process will only show above module exported i.e.,  exports: { sum: [Function: sum] },. Other js files wont because exports is  private to each module.
 //console.log("Process: ", process);
