@@ -35,3 +35,16 @@ console.log("hello from the other side");
 
 Here, content of file should have been printed first but hello from the other side is printed first because of events being asyunchronous and reading content from file 
 takes longer time than simply logging some text in console.
+
+
+////nodeAPI//////// new folder for learning API creation via node js 
+
+contains folder routes which contains post.js. This JS file is for all the API methods to be created in the project which will be exported to app.js of nodeAPI
+
+Morgan is a middleware provided by NPM to track where the callback function are obtained from if there is presence of routes.
+
+middleware can be created or used NPM released. Can be used for authentication. middleware takes 3 arguments req, response and next. Here next is required as once the middleware does
+its job it should pass that event to next event in event loop so next() is required.
+
+routes===> for just routing
+controller====>all the logic should be written here
